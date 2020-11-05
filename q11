@@ -1,1 +1,31 @@
-scsadcsx
+
+#include <bits/stdc++.h> 
+using namespace std; 
+  
+void printans(int n) 
+{ 
+long long int a;
+    for (int i = 1; i <= n / 3; i++)  
+    { 
+          
+        for (int j = i + 1; j <= n / 2; j++)  
+        { 
+            int k = n - i - j; 
+            if (i * i + j * j == k * k)  
+            {  a=i*j*k;
+                 cout<<" the product abc for which the Pythagorean triplet  a + b + c = 1000. "<<endl<<a;
+                return; 
+            } 
+        } 
+    }  
+  
+    cout << "no such triplet exist "; 
+    return ;
+} 
+  
+int main() 
+{ 
+    int n =1000 ; 
+printans(n); 
+    return 0; 
+} 
